@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>7 Steps to Web Accessibility</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/olawar.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>7 kroków do bardziej dostępnych stron internetowych</h1>
+					<hr>
+					<h2>Ola Warzecha</h2>
+					<small><a href="mailto:warzecha.ola@gmail.com">warzecha.ola@gmail.com</a> | <a href="https://github.com/olawar/accessibility-7-steps">github.com/olawar/accessibility-7-steps</a></small>
+				</section>
+
+				<section>
+					<h2>Spis treści</h2>
+					<ul>
+						<li class="fragment"><a href="#one">Pomyśl o użytkownikach</a></li>
+						<li class="fragment"><a href="#two">Pomóż użytkownikowi odnaleźć się w serwisie</a></li>
+						<li class="fragment"><a href="#three">Zadbaj o dostępną warstwę graficzną</a></li>
+						<li class="fragment"><a href="#four">Wspieraj "assistive technologies"</a></li>
+						<li class="fragment"><a href="#five">Koduj semantycznie i rzetelnie</a></li>
+						<li class="fragment"><a href="#six">Uważaj na multimedia</a></li>
+						<li class="fragment"><a href="#eight">Bądź własnym audytorem</a></li>
+					</ul>
+				</section>
+
+				<section id="one">
+				    <section>
+				        <h2>Krok 1: Pomyśl o użytkownikach</h2>
+				    </section>
+
+				    <section>
+				    	<h3>Uwzględnij różne ograniczenia</h3>
+				    	<ul>
+				    		<li class="fragment">niepełnosprawność zmysłową</li>
+				    		<li class="fragment">niepełnosprawność ruchową</li>
+				    		<li class="fragment">upośledzenie umysłowe</li>
+				    		<li class="fragment">wiek i różnice wynikające z innej percepcji</li>
+				    		<li class="fragment">korzystania z innych urządzeń niż te, które chcielibyśmy widzieć jako domyślne</li>
+				    	</ul>
+				    </section>
+					
+					<section>
+					    <h3>... i różne narzędzia:</h3>
+						<ul>
+							<li class="fragment">czytniki software'owe: <a href="http://www.nvda.pl/">NVDA</a>, <a href="http://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a>, <a href="http://www.gwmicro.com/window-eyes/">Window-Eyes (współpraca z urządzeniami brailowskimi)</a>, VoiceOver (Apple)</li>
+							<li class="fragment">programy powiększające</li>
+							<li class="fragment">linijka brajlowska</li>
+							<li class="fragment">wsparcie w smartfonach</li>
+							<li class="fragment">klawiatura i jej wariacje!</li>
+						</ul>
+					</section>
+
+				    <section>
+				    	<h3>Z dostępnych usprawnień korzysta każdy z nas:</h3>
+				    	<ul>
+				    		<li class="fragment">Responsive Web Design</li>
+				    		<li class="fragment">crossbrowser compatibility</li>
+				    		<li class="fragment">transkrypcja tekstowa w wideo</li>
+				    		<li class="fragment">możliwość powiększenia tekstu</li>
+				    		<li class="fragment">a nawet - błędy podczas ładowania strony</li>
+				    	</ul>
+				    </section>
+				</section>
+				
+				<section id="two">
+				    <section>
+						<h2>Krok 2: Pomóż użytkownikowi odnaleźć się w serwisie</h2>
+					</section>
+
+					<section>
+					    <h3>Poruszanie się po stronie:</h3>
+						<ul>
+							<li class="fragment">"skanowanie" nagłówków - skróty czytnika</li>
+							<li class="fragment">przejście po interaktywnych elementach strony - linki, buttony, inputy i elementy z tabindex >= 0 - <span class="attention">Tab</span> i <span class="attention">Shift + Tab</span></li>
+							<li class="fragment">poruszanie się po wybranych elementach skrótami, np. listy, paragrafy, etc. - skróty czytnika</li>
+						</ul>
+						<small class="fragment">Więcej informacji na <a href="http://webaim.org/techniques/screenreader/">WebAIM</a></small>
+					</section>
+					
+					<section>
+						<h3>Spójna organizacja bloków treści w serwisie www</h3>
+
+						<div class="fragment" style="display: block; width: 90%; height: 60px; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; text-align: center; background-color: red">Nawigacja główna | wyszukiwarka</div>
+						<small class="fragment" style="display: block; width: 90%; position: relative; text-align: left; margin-left: auto; margin-right: auto">Ścieżka okruszków &#62; informuje gdzie jesteśmy</small>
+						<div class="fragment" style="display: block; width: 90%; height: 120px; margin-left: auto; margin-right: auto; margin-top: 15px; text-align: center; background-color: green">Główna treść</div>
+						<div class="fragment" style="display: block; width: 90%; height: 60px; margin-left: auto; margin-right: auto; margin-top: 15px; text-align: center; background-color: violet">Stopka</div>
+					</section>
+				</section>
+
+				<section id="three">
+					<section>
+						<h2>Krok 3: Zadbaj o dostępną warstwę graficzną</h2>
+					</section>
+					
+					<section data-background="#6987f3" data-background-transition="zoom" class="light-bg">
+						<ul>
+							<li class="fragment">
+						  	na poziomie AA wymagany kontrast podstawowy tekst vs tło to 4,5:1 (coraz rzadziej rekomenduje się osobną wersję serwisu z podwyższonym kontrastem, choć wciąż zdarzają się <a href="http://www.lazienki-krolewskie.pl/pl/dostepnosc">ciekawe realizacje</a>)
+							</li>
+							<li class="fragment">
+								powiększanie czcionek możliwe do 200% (rekomendowane są jednostki rem, em, %, px)
+							</li>
+							<li class="fragment">
+								czytelne rozmiary czcionek
+							</li>
+							<li class="fragment">
+								unikanie justowania tekstu do prawej
+							</li>
+						</ul>
+					</section>					
+				</section>
+
+				<section id="four">
+					<section>
+						<h2>Krok 4: Wspieraj "assistive technologies"</h2>
+					</section>
+					
+					<section>
+					    <ul>
+						    <li>alty do obrazków</li>
+							<li>ukryte spany z tekstem</li>
+							<li>elementy interfejsu użytkownika takie jak skiplinki</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3>Atrybuty WAI-ARIA</h3>
+						<p class="fragment">Web Accessibility Initiative - Accessible Rich Internet Applications - pozwalają zwiększyć dostępność dynamicznych treści i elementów interfejsu użytkownika</p>
+						<p class="fragment">Definiją role, właściwości i stany elementów na stronie</p>
+					</section>
+
+					<section>
+						<h3>Przykład zastosowania - taby / akordeon</h3>
+<pre><code data-trim>
+<ul id="tabs-controls" role="tablist">
+  <li role="presentation">
+    <a href="#content-1" id="tab-1" role="tab" aria-controls="content-1" aria-expanded aria-selected>Tab 1</a>
+  </li>
+  <li role="presentation">
+    <a href="#content-2" id="tab-2" role="tab" aria-controls="content-2" aria-expanded aria-selected>Tab 1</a>
+  </li>
+</ul>
+
+<div class="tabs-content-wrapper">
+  <div id="content-1" aria-labelledby="tab-1" role="tabpanel" aria-hidden>
+    <p>To jest treść pierwszego taba</p>
+  </div>
+  <div id="content-2" aria-labelledby="tab-2" role="tabpanel" aria-hidden>
+    <p>To jest treść drugiego taba</p>
+  </div>
+</div>
+</pre></code>
+					</section>					
+				</section>
+				
+				<section id="five">
+					<section>
+						<h2>Krok 5: Koduj semantycznie i rzetelnie</h2>
+					</section>
+					
+					<section>
+						<p class="fragment">
+						  Nie zapominaj o:
+						</p>
+						<ul>
+							<li class="fragment">
+								deklaracji html
+							</li>
+							<li class="fragment">
+								atrybucie 'lang'
+							</li>
+							<li class="fragment">
+								tagu &#60;title&#62; innym dla każdej podstrony
+							</li>
+							<li class="fragment">
+								&#60;h1&#62; - jeden na stronie
+							</li>
+							<li class="fragment">
+								logicznej strukturze nagłówków - stylowanie po klasach a nie tylko elementach
+							</li>
+							<li class="fragment">
+								logicznych altach obrazków - odzwieciedlających ich role
+							</li>
+							<li class="fragment">korzystaniu z semantyki HTML5 w zgodzie ze specyfikacją</li>
+							<li class="fragment">strona musi być dostępna również bez CSS</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Dostosowany JS</h3>
+						<ul>
+							<li class="fragment">przyjmuje się, że wszystkie czytniki obsługują JS</li>
+							<li class="fragment">niezbędne jest zakodowanie odpowiednich stanów ARIA przy zmianach elementów, np. aria-hidden, aria-expanded, aria-selected</li>
+							<li class="fragment">trzeba też pamiętać o dostępie z klawiatury oraz odpowiednim zarządzaniu focusem</li>
+						</ul>
+					</section>				
+			
+				</section>
+				
+				<section id="six">
+					<section>
+						<h2>Krok 6: Ostrożnie z multimediami</h2>
+					</section>					
+				
+					<section>
+						<p class="fragment">
+							Należy unikać zakłóceń ze strony multimediów - domyślnie wyłączone odtwarzanie wideo i dźwięku, możliwość sterowania z klawiatury
+						</p>
+					</section>
+								
+				</section>
+
+				<section id="seven">
+					<section>
+				        <h2>Krok 7: bądź własnym audytorem</h2>
+				    </section>
+
+				    <section>
+				        <h3>Narzędzia audytora</h3>
+				        <p class="fragment">Automatyczny walidator:</p>
+				        <ul>
+				        	<li class="fragment"><a href="http://wave.webaim.org/">WAVE (Web Accessibility Evaluation Tool)</a> - też jako wtyczka do Firefoxa i Chrome</li>
+				        	<li class="fragment">wtyczka do Chrome 'Accessibility Developer Tools'</li>
+				        	<li class="fragment"><a href="http://www.tawdis.net/ingles.html?lang=en">TAWDIS</a></li>
+				        </ul>
+				        <p class="fragment">Analiza kontrastu - <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a></p>
+				        <p class="fragment">Czytnik</p>
+				        <p class="fragment">Wsparcie niepełnosprawnego testera</p>
+				    </section>
+
+				    <section>
+				        <h3>Wynik audytu</h3>
+				        <p class="fragment">Raport ułożony punkt po punkcie zgodnie z dokumentacją WCAG - <a href="http://wcag20.widzialni.org/wcag-20-zasada-1-percepcja,m,mg,165">np. jak w opracowaniu na stronie Fundacji Widzialni</a></p>
+				    </section>
+				</section>
+
+				<section id="eight">
+					<section>
+				        <h2>Materiały i przydatne linki</h2>
+				    </section>
+
+				    <section>
+						<h3>Źródła, materiały i&nbsp;przykłady</h3>
+						<ul>
+							<li>
+								<a href="http://fdc.org.pl/wcag2/">Dokumentacja WCAG 2.0 (po polsku)</a>
+							</li>
+							<li>
+								<a href="https://www.w3.org/WAI/WCAG20/quickref/">How to Meet WCAG 2.0</a>
+							</li>
+							<li>
+								<a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html">Understanding WCAG 2.0</a>
+							</li>
+							<li>
+								<a href="https://www.w3.org/TR/WCAG20-TECHS/">Techniques for WCAG 2.0</a>
+							</li>
+							<li>
+								<a href="https://w3c.github.io/html-aria/">ARIA in HTML</a>
+							</li>
+							<li>
+								<a href="http://wcag20.widzialni.org/index.php">WCAG 2.0 - opracowanie Fundacji Widzialni</a>
+							</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h3>Źródła, materiały i&nbsp;przykłady (c.d.)</h3>
+						<ul>
+							<li>
+								<a href=http://accessibility.voxmedia.com/">Przydatna checklista</a>
+							</li>
+							<li>
+								<a href="http://www.widzialni.org/container/Badanie-dostepnosci-stron-www-w-oparciu-o-WCAG.pdf">Badanie dostępności strony www w oparciu o WCAG (pdf)</a>
+							</li>
+							<li>
+								<a href="http://www.widzialni.org/container/podrecznik6-www.pdf">WCAG 2.0 Podręcznik Dobrych Praktyk (pdf)</a>
+							</li>
+							<li>
+								<a href="http://dostepnestrony.pl/artykul/wcag-2-0-w-skrocie/">Dostępne strony - WCAG 2.0 w skrócie</a>
+							</li>
+							<li>
+								<a href="http://internet-bez-barier.com/">Internet bez barier - blog</a>
+							</li>
+							<li>
+								<a href="http://www.integracja.org/">Dostępna strona - Fundacja Integracja</a>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Praktyczne przykłady dostępnych komponentów</h3>
+						<ul>
+							<li>
+								<a href="http://webaim.org/">WebAIM - świetne źródło opracowań i przykładów</a>
+							</li>
+							<li>
+								<a href="http://heydonworks.com/practical_aria_examples/">Practical ARIA Examples</a>
+							</li>
+							<li>
+								<a href="https://adobe-accessibility.github.io/Accessible-Mega-Menu/">Accessible Mega Menu</a>
+							</li>
+							<li>
+								<a href="http://www.oaa-accessibility.org/examplep/accordian2/">Dostępny akordeon</a>
+							</li>
+							<li>
+								<a href="http://accessibility.athena-ict.com/aria/examples/tabpanel2.shtml">Dostępne taby</a>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Narzędzia</h3>
+						<ul>
+							<li>
+								<a href="http://www.aremycoloursaccessible.com/">Are My Colours Accessible</a>
+							</li>
+							<li>
+								<a href="http://colorsafe.co/">Generator dostępnych palet kolorystycznych</a>
+							</li>
+							<li>
+				        	    <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a>
+				        	</li>
+							<li>
+							    <a href="http://wave.webaim.org/">WAVE (Web Accessibility Evaluation Tool)</a>
+							</li>
+				        	<li>
+				        	    <a href="http://www.tawdis.net/ingles.html?lang=en">TAWDIS</a>
+				        	</li>
+				        	<li>
+							     <a href="http://www.nvda.pl/">NVDA</a>, <a href="http://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a>, <a href="http://www.gwmicro.com/window-eyes/">Window-Eyes</a> 
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>Powodzenia w tworzeniu dostępnych stron!</h2>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>s
+		<script src="js/reveal.js"></script>
+
+		<script>
+			
+			Reveal.initialize({
+				history: true,
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

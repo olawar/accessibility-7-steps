@@ -1,0 +1,67 @@
+/**
+ * Custom theme for reveal.js by Ola Warzecha
+ *
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/lato/stylesheet.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #030b28;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 40px;
+$mainFont: 'latoregular', Helvetica, sans-serif;
+$headingFont: 'latobold', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #6987f3;
+$linkColorHover: darken( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+.light-bg {
+
+	* {
+		color: $backgroundColor;
+	}
+
+	a {
+		color: #550000 !important;
+
+		&:hover {
+		    color: lighten( #550000, 15% ) !important;
+		}
+	}
+}
+
+.attention {
+	color:  #F14020;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.4;
+  font-weight: inherit; 
+}
