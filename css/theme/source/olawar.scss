@@ -31,15 +31,15 @@ $linkColor: #6987f3;
 $linkColorHover: darken( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.5em;
-$heading2Size: 1.6em;
-$heading3Size: 1.3em;
+$heading1Size: 1.5em;
+$heading2Size: 1.3em;
+$heading3Size: 1.2em;
 $heading4Size: 1.0em;
 
 .light-bg {
 
 	* {
-		color: $backgroundColor;
+		color: $backgroundColor !important;
 	}
 
 	a {
