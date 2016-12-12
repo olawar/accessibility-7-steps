@@ -61,7 +61,7 @@
 
 				<section id="one">
 				    <section>
-				        <h2>Krok 1: pomyśl o potrzebach użytkowników</h2>
+				        <h2>Krok 1: <br>pomyśl o potrzebach użytkowników</h2>
 				    </section>
 
 				    <section>
@@ -98,49 +98,27 @@
 				
 				<section id="two">
 				    <section>
-						<h2>Krok 2: pomóż użytkownikowi odnaleźć się w serwisie / na stronie</h2>
+						<h2>Krok 2 &amp; 3: <br>współpracuj z projektantem UX i grafikiem</h2>
 					</section>
 
 					<section>
 						<h3>Spójna organizacja bloków treści w serwisie www</h3>
 
+						<small class="fragment" style="display: block; width: 90%; position: relative; text-align: left; margin-left: auto; margin-right: auto">&#60;title&#62; właściwy dla zawartości strony</small>
 						<div class="fragment" style="display: block; width: 90%; height: 60px; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; text-align: center; background-color: red">&#60;nav&#62; nawigacja główna</div>
 						<small class="fragment" style="display: block; width: 90%; position: relative; text-align: left; margin-left: auto; margin-right: auto">ścieżka okruszków &#62; informuje gdzie jesteśmy</small>
 						<div class="fragment" style="display: block; width: 90%; height: 120px; margin-left: auto; margin-right: auto; margin-top: 15px; text-align: center; background-color: green">&#60;main&#62; główna treść <br> zawierająca &#60;h1&#62; </div>
 						<div class="fragment" style="display: block; width: 90%; height: 60px; margin-left: auto; margin-right: auto; margin-top: 15px; text-align: center; background-color: violet">&#60;footer&#62; stopka</div>
 					</section>
 
-					<section>
-						<h3>Na każdej stronie:</h3>
-						<ul>
-							<li class="fragment">
-								obowiązkowo: &#60;title&#62; i &#60;h1&#62; informujące o głównej zawartości danej strony
-							</li>
-							<li class="fragment">
-								wyróżnione linki, informacje o plikach do pobrania (waga, format)
-							</li>
-							<li class="fragment">
-								<span style="display: block">widoczny focus</span>
-								<img src="img/focus.JPG" alt="focus na Orange.pl">
-								<img src="img/focus2.JPG" alt="focus na DostepneStrony.pl">
-							</li>
-						</ul>
-					</section>
-				</section>
-
-				<section id="three">
-					<section>
-						<h2>Krok 3: zadbaj o dostępną warstwę graficzną</h2>
-					</section>
-					
 					<section data-background="#6987f3" data-background-transition="zoom" class="light-bg">
-						<h3>Podstawowe zasady:</h3>
+						<h3>Dostępna warstwa graficzna:</h3>
 						<ul>
 							<li class="fragment">
 								czytelne: rozmiar tekstu i krój fontu
 							</li>
 							<li class="fragment">
-						  	    kontrast podstawowy tekst vs tło to 4,5:1 (WCAG 2.0 AA)
+								kontrast podstawowy tekst vs tło to 4,5:1 (WCAG 2.0 AA)
 							</li>
 							<li class="fragment">
 								powiększanie tekstu możliwe do 200% (rekomendowane jednostki: rem, em, %, px)
@@ -148,11 +126,16 @@
 							<li class="fragment">
 								unikanie justowania tekstu do prawej
 							</li>
+							<li class="fragment">
+								<span style="display: block">wyróżnione linki, widoczny focus</span>
+								<img src="img/focus.JPG" alt="focus na Orange.pl">
+								<img src="img/focus2.JPG" alt="focus na DostepneStrony.pl">
+							</li>
 						</ul>
 					</section>
 
 					<section>
-						<h3>Alternatywa dla elementów graficznych</h3>
+						<h3>Alternatywne treści / wskazówki</h3>
 						<ul>
 							<li class="fragment">
 								brak wskazówek zmysłowych ("kliknij w czerwony guzik")
@@ -172,7 +155,7 @@
 
 				<section id="four">
 					<section>
-						<h2>Krok 4: Wspieraj "assistive technologies"</h2>
+						<h2>Krok 4: <br>wspieraj "assistive technologies"</h2>
 					</section>
 
 					<section>
@@ -255,7 +238,7 @@
 						<h3>Atrybuty WAI-ARIA</h3>
 						<p class="fragment">Pozwalają zapewnić dostępność elementom UI, które nie mają odpowiednich tagów HTML i informować o dynamicznych zmianach treści</p>
 						<p class="fragment">Definiją role, właściwości i stany elementów na stronie</p>
-						<p class="fragment attention">Korzystajcie z nich z "rozsądkiem"</p>
+						<p class="fragment attention">Korzystajcie z nich z umiarem</p>
 					</section>
 
 					<section>
@@ -284,7 +267,7 @@
 				
 				<section id="five">
 					<section>
-						<h2>Krok 5: koduj semantycznie i rzetelnie</h2>
+						<h2>Krok 5: <br> koduj logicznie, semantycznie i rzetelnie</h2>
 					</section>
 					
 					<section>
@@ -339,7 +322,7 @@
 				
 				<section id="six">
 					<section>
-						<h2>Krok 6: uważaj na multimedia</h2>
+						<h2>Krok 6: <br>uważaj na multimedia</h2>
 					</section>					
 				
 					<section>
@@ -364,11 +347,11 @@
 				    </section>
 
 				    <section>
-				        <h3>Wykorzystuj te narzędzia</h3>
+				        <h3>Korzystaj na co dzień z:</h3>
 						<ul>
 				        	<li class="fragment"><a href="http://wave.webaim.org/">WAVE (Web Accessibility Evaluation Tool)</a> - walidator, dostępny też jako wtyczka do Firefoxa i Chrome</li>
 				        	<li class="fragment">ewentualnie: wtyczka do Chrome 'Accessibility Developer Tools'</li>
-							<li class="fragment">do analizy kontrastu - <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a></li>
+							<li class="fragment"><a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> do analizy kontrastu</li>
 							<li class="fragment">czytnik, np. Chromevox jako wtyczka do Chrome</li>
 				        </ul>
 				    </section>
